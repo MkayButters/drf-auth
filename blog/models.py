@@ -6,8 +6,6 @@ class Blog(models.Model):
     description = models.TextField(default = '')
     purchaser = models.ForeignKey(get_user_model(), on_delete=models.CASCADE)
 
-def __str__(self):
-    return self.name
+    def __str__(self):
+        return self.name
 
-
-# Create your models here.

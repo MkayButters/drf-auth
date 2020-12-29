@@ -3,5 +3,5 @@ from rest_framework.serializers import ModelSerializer
 
 class BlogSerializer(ModelSerializer):
     class Meta:
-        model = blog
+        model = Blog
         fields = ('id', 'name', 'purchaser', 'description')
