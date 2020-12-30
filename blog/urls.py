@@ -1,6 +1,7 @@
-from .views import Blog
+from .views import ListBlogPostsView, BlogRetrieveUpdateDestroy
+from django.urls import path
 
 urlpatterns = [
-    path('', Blog.as_view(), name = 'blog post'),
-    path('<int:pk/>', BlogRetrieveUpdateDestroy.as_view(), name = "destroy"),
+    path('', ListBlogPostsView.as_view(), name = 'all blog post'),
+    path('<int:pk>', BlogRetrieveUpdateDestroy.as_view(), name = "destroy"),
 ]

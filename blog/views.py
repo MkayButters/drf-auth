@@ -3,7 +3,7 @@ from .models import Blog
 from .serializers import BlogSerializer
 from .permissions import IsPurchaserOrReadOnly
 
-class Blog(ListCreateAPIView):
+class ListBlogPostsView(ListCreateAPIView):
     queryset = Blog.objects.all()
     serializer_class = BlogSerializer
 
